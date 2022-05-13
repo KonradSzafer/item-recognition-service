@@ -19,7 +19,7 @@ RUN pip install \
 RUN pip install torch
 
 COPY src .
-EXPOSE 8000:8000
+EXPOSE 8000
 
-CMD ["python3", "item_prediction.py"]
-# ENTRYPOINT ["uvicorn", "item_prediction:app", "--host", "0.0.0.0", "--port", "8000"]
+# CMD ["python3", "item_prediction.py"]
+ENTRYPOINT ["uvicorn", "item_prediction:app", "--host", "0.0.0.0", "--port", "8000"]
