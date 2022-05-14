@@ -1,3 +1,9 @@
-531: '50-300$',
-681: '400-2000$',
-285: "You can't sell animals"
+402: '100-2000$', # acoustic guitar
+409: '100-4000$, # analog clock
+414: '20-200$, # backpack
+430: '20-100$, # basketball
+531: '50-500$', # digital watch
+681: '400-2000$', # notebook, notebook computer
+826: '100-4000$, # stopwatch
+285: 'You can't sell animals' # Egyptian cat
+413: 'You can't sell guns' # assault rifle, assault gun
