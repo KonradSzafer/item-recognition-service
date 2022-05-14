@@ -16,14 +16,14 @@ def get_dict(filename):
             class_idx = int(line.split(':')[0])
             line = line.split('#')[0] # remove comment
             name = line.split(':')[1]
-            name = name[2:-3]
+            name = name[2:-2]
             class_names[class_idx] = name
     return class_names
 
 
 def preprocessing(img):
     transform = transforms.Compose([
-        transforms.CenterCrop(1000),
+        # transforms.CenterCrop(1000),
         transforms.Resize((224,224)),
         transforms.ToTensor(),
         transforms.Normalize(
@@ -53,7 +53,7 @@ def predict(img):
     return {
         'class name': class_name,
         'price': class_price,
-        # 'percentage': percentage,
+        'percentage': percentage,
     }
 
 
