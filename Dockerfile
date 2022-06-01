@@ -7,16 +7,12 @@ RUN apt-get update \
     && apt-get clean all \
     && rm -r /var/lib/apt/lists/*
 
-RUN /opt/conda/bin/conda install --yes \
-    pillow \
-    matplotlib
-
 RUN pip install \
+    pillow \
+    matplotlib \
     fastapi \
     uvicorn \
     python-multipart
-
-RUN pip install torch
 
 COPY src .
 EXPOSE 8000
