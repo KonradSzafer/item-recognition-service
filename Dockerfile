@@ -17,5 +17,4 @@ RUN pip install \
 COPY src .
 EXPOSE 8000
 
-# CMD ["python3", "item_prediction.py"]
-ENTRYPOINT ["uvicorn", "item_prediction:app", "--host", "0.0.0.0", "--port", "8000"]
+ENTRYPOINT ["uvicorn", "item_recognition:app", "--host", "0.0.0.0", "--port", "8000"]

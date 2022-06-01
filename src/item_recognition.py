@@ -84,11 +84,7 @@ async def get_info(file: UploadFile = File(...)):
 
 
 # if __name__ == '__main__':
-
-    # pass
-    # uvicorn.run('item_prediction:app')
-
-    # img = Image.open('cat0.jpg').convert('RGB')
+    # img = Image.open('sample0.jpg').convert('RGB')
     # img = preprocessing(img)
     # out = predict(img)
     # print(out)
