@@ -1,11 +1,9 @@
-FROM pytorch/pytorch:latest
+FROM continuumio/miniconda3
 
-RUN apt-get update \
-    && apt-get install -y \
-        libgl1-mesa-glx \
-        libx11-xcb1 \
-    && apt-get clean all \
-    && rm -r /var/lib/apt/lists/*
+RUN pip install \
+    torch \
+    torchvision \
+    --extra-index-url https://download.pytorch.org/whl/cpu
 
 RUN pip install \
     pillow \
